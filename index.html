@@ -47,9 +47,10 @@
                 opacity: 1;
             }
             main {
-                flex: 1;
                 padding: 20px;
                 display: flex;
+                height: 100vh;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 opacity: 0;
@@ -159,10 +160,11 @@
                 text-decoration-thickness: 1px;
             }
 
-            #info p.customfont{
+            p.customfont{
                 font-family: 'Barrabar', sans-serif;
                 font-size: 42px;
                 line-height: 44px;
+                text-align: center;
             }
             a img{
                 width: 32px;
@@ -191,18 +193,18 @@
                     padding-bottom: 164px;
                 }
                 main img{
-                    width: 90%;
+                    width: 100%;
                 }
                 h1 {
-                    font-size: 30px;
+                    font-size: 28px;
                 }
                 h2 {
-                    font-size: 36px;
-                    margin-top: 12px;
+                    font-size: 32px;
+                    margin-top: 10px;
                     margin-bottom: 6px;
                 }
                 #show_info {
-                    font-size: 30px;
+                    font-size: 28px;
                 }
                 #show_info:hover{
                     transform: none;
@@ -212,7 +214,7 @@
                     line-height: 20px;
                     margin-bottom: 12px;
                 }
-                #info p.customfont{
+                p.customfont{
                     font-family: 'Barrabar', sans-serif;
                     font-size: 30px;
                     line-height: 32px;
@@ -226,10 +228,10 @@
             <button id="show_info">Info</button>
         </header>
         <main>
+            <p class="customfont">Et lite sted for gode glass<br> og noe å dele.</p>
             <img src="images/barra-illustrasjon.png">
         </main>
         <section id="info">
-            <p class="customfont">Et lite sted for gode glass<br> og noe å dele.</p>
             <h2>Om oss</h2>
             <p>
                 Vi serverer vin vi er glad i og småretter som passer til. Ost, spekemat og enkle småretter.<br>
