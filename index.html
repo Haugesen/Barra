@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Barra</title>
         <!-- Create all necessary meta tags and links -->
-        <meta name="description" content="Barra, vin og småtteri - en koselig bar i Oslo med fokus på vin og småretter. Besøk oss for en unik opplevelse!">
+        <meta name="description" content="Barra, vin og småtteri - en koselig bar i Oslo med fokus på vin og småtteri. Besøk oss for en unik opplevelse!">
         <style>
             /** IMPORT CUSTOM FONT called Barrabar-Regular.woff2 in fonts folder **/
             @font-face {
@@ -69,7 +69,7 @@
                 pointer-events: auto;
             }
             footer {
-                position: absolute;
+                position: fixed;
                 bottom: 0;
                 left: 0;
                 width: 100%;
@@ -97,8 +97,11 @@
                 font-family: 'Barrabar', sans-serif;
                 font-weight: normal;
                 font-size: 42px;
-                margin-bottom: 16px;
+                margin-bottom: 12px;
                 margin-top: 32px;
+            }
+            h2:first-child{
+                margin-top: 0;
             }
             #info p{
                 font-family: 'Helvetica', sans-serif;
@@ -115,17 +118,19 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
+                overflow-y: scroll;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 padding: 24px;
-                padding-top: 15vh;
+                padding-top: 10vh;
                 text-align: center;
                 background-color: #ffa8b9;
                 opacity: 0;
                 transition-duration: .25s;
                 user-select: none;
                 pointer-events: none;
+                padding-bottom: 164px;
             }
             #info.active{
                 opacity: 1;
@@ -135,7 +140,7 @@
             #show_info {
                 font-family: 'Barrabar', sans-serif;
                 font-size: 40px;
-                padding: 8px 16px;
+                padding: 0px;
                 background-color: transparent;
                 border: none;
                 color: #c01336;
@@ -150,15 +155,47 @@
                 text-decoration-thickness: 1px;
             }
 
+            #info p.customfont{
+                font-family: 'Barrabar', sans-serif;
+                font-size: 42px;
+                line-height: 44px;
+                margin-bottom: 32px;
+            }
+            a img{
+                width: 32px;
+                height: auto;
+                vertical-align: middle;
+                margin-right: 12px;
+            }
+            h2 a{
+                text-decoration: none;
+            }
             @media (max-width: 600px) {
+                header {
+                    padding: 16px;
+                    background-color: #ffa8b9;
+                }
+                footer{
+                    padding: 16px;
+                }
+                footer p{
+                    font-size: 22px;
+                }
+                #info {
+                    overflow-y: scroll;
+                    padding: 16px;
+                    padding-top: 112px;
+                    padding-bottom: 164px;
+                }
                 main img{
-                    width: 100%;
+                    width: 90%;
                 }
                 h1 {
                     font-size: 30px;
                 }
                 h2 {
                     font-size: 36px;
+                    margin-bottom: 8px;
                 }
                 #show_info {
                     font-size: 30px;
@@ -169,6 +206,13 @@
                 #info p {
                     font-size: 15px;
                     line-height: 20px;
+                    margin-bottom: 12px;
+                }
+                #info p.customfont{
+                    font-family: 'Barrabar', sans-serif;
+                    font-size: 30px;
+                    margin-bottom: 16px;
+                    line-height: 34px;
                 }
             }
         </style>
@@ -182,16 +226,30 @@
             <img src="images/barra-illustrasjon.png">
         </main>
         <section id="info">
+            <p class="customfont">Et lite sted for gode glass<br> og noe å dele.</p>
+            <h2>Om oss</h2>
+            <p>
+                Vi serverer vin vi er glad i<br>
+                og småretter som passer til.<br>
+                Ost, spekemat og enkle småretter.
+            </p>
+            <p>
+                Laget for å deles – eller bare nytes alene.
+            </p>
             <h2>Åpningstider:</h2>
             <p>
-                man – tor 13:00 – 00:00<br>
-                fre – lør 13:00 – 01:30<br>
-                Søn – Stengt
+                man: kl.16:00 – 00:00<br>
+                tir-lør: kl.14:00 – 01:00<br>
+                søn: STENGT
             </p>
             <h2>Reservasjoner:</h2>
-            <p>Vi tar ikke reservasjoner — her er det bare å stikke innom.</p>
-            <p>Men er dere 10 eller flere som vil samle dere, kan du sende oss en forespørsel. Lokalet tar opptil 50 personer.</p>
-            <p>Send dato, anledning og antall til <a href="mailto:kontakt@barrabar.no">kontakt@barrabar.no</a>, så følger vi opp med muligheter og priser.</p>
+            <p>Vi tar ikke imot reservasjoner - her er det å bare stikke innom.</p>
+            <p>Er dere 10 eller flere, kan dere sende oss en mail!</p>
+            <p>Passer for bursdager, lanseringer,
+og små, intime samlinger.
+            </p>
+            <p><a href="mailto:kontakt@barrabar.no">kontakt@barrabar.no</a></p>
+            <h2><a href="https://www.instagram.com/barra.oslo/"><img src="images/IG-barra.svg" alt="Instagram">Instagram</a></h2>
         </section>
         <footer>
             <p>
