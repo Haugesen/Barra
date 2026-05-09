@@ -55,10 +55,12 @@
                 opacity: 0;
                 transition-duration: 1s;
                 transform: scale(.9);
+                transition-delay: .5s;
             }
             main.loaded{
                 opacity: 1;
                 transform: scale(1);
+                transition-delay: 0s;
             }
             main img{
                 width: 30vw;
@@ -127,15 +129,19 @@
                 text-align: center;
                 background-color: #ffa8b9;
                 opacity: 0;
-                transition-duration: .25s;
+                transform: scale(.9);
+                transition-duration: .5s;
                 user-select: none;
                 pointer-events: none;
                 padding-bottom: 164px;
+                transition-delay: 0s;
             }
             #info.active{
+                transform: scale(1);
                 opacity: 1;
                 user-select: auto;
                 pointer-events: auto;
+                transition-delay: .25s;
             }
             #show_info {
                 font-family: 'Barrabar', sans-serif;
@@ -262,9 +268,11 @@ og små, intime samlinger.
         <script>
             const showInfoButton = document.getElementById('show_info');
             const infoSection = document.getElementById('info');
+            const main = document.querySelector('main');
 
             showInfoButton.addEventListener('click', () => {
                 infoSection.classList.toggle('active');
+                main.classList.toggle('loaded');
                 if (infoSection.classList.contains('active')) {
                     showInfoButton.textContent = 'Lukk';
                 } else {
