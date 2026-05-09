@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Barra</title>
+        <meta name="format-detection" content="telephone=no">
         <!-- Create all necessary meta tags and links -->
         <meta name="description" content="Barra, vin og småtteri - en koselig bar i Oslo med fokus på vin og småtteri. Besøk oss for en unik opplevelse!">
         <style>
@@ -13,6 +14,21 @@
                 src: url('font/Barrabar-Regular.woff2') format('woff2');
                 font-weight: normal;
                 font-style: normal;
+            }
+            /* Specifically target Apple's auto-generated links */
+            a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+            }
+
+            /* Or target standard telephone links if you've added them manually */
+            a[href^="tel"] {
+            color: inherit;
+            text-decoration: none;
             }
             * {
                 box-sizing: border-box;
@@ -87,6 +103,9 @@
             }
             footer p{
                 font-size: 26px;
+            }
+            footer p a{
+                text-decoration: none;
             }
             h1{
                 font-family: 'Barrabar', sans-serif;
