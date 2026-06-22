@@ -162,7 +162,7 @@ font-family: "Oxygen", sans-serif;
                 pointer-events: auto;
                 transition-delay: .25s;
             }
-            #show_info {
+            #show_info, a.nav_link{
                 font-family: 'Barrabar', sans-serif;
                 font-size: 40px;
                 padding: 0px;
@@ -170,9 +170,14 @@ font-family: "Oxygen", sans-serif;
                 border: none;
                 color: #c01336;
                 cursor: pointer;
+                text-decoration: none;
                 transition-duration: .2s;
             }
-            #show_info:hover{
+            a.nav_link{
+                margin-left: auto;
+                margin-right: 54px;
+            }
+            #show_info:hover, a.nav_link:hover{
                 transform: scale(1.15);
             }
             a{
@@ -217,17 +222,20 @@ font-family: "Oxygen", sans-serif;
                     width: 90%;
                 }
                 h1 {
-                    font-size: 28px;
+                    font-size: 26px;
                 }
                 h2 {
                     font-size: 32px;
                     margin-top: 12px;
                     margin-bottom: 4px;
                 }
-                #show_info {
-                    font-size: 28px;
+                #show_info, a.nav_link{
+                    font-size: 26px;
                 }
-                #show_info:hover{
+                a.nav_link{
+                    margin-right: 24px;
+                }
+                #show_info:hover, a.nav_link:hover{
                     transform: none;
                 }
                 #info p {
@@ -246,6 +254,7 @@ font-family: "Oxygen", sans-serif;
     <body>
         <header>
             <h1>Barra, vin og småtteri</h1>
+            <a class="nav_link" href="Barra-meny.pdf" target="_blank">Meny</a>
             <button id="show_info">Info</button>
         </header>
         <main>
